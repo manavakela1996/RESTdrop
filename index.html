@@ -509,6 +509,123 @@
     .footer a:hover {
       text-decoration: underline;
     }
+
+    /* Diagram & Flow Visuals */
+    .diagram-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .diagram-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    .diagram-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .diagram-desc {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .diagram-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      display: block;
+      background: #0f172a;
+    }
+
+    kbd {
+      background: var(--badge-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      color: var(--text-primary);
+      display: inline-block;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      padding: 3px 6px;
+      margin: 0 2px;
+    }
+
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+
+    .step-num {
+      background: var(--accent-color);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-content h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .guide-modal-preview {
+      margin-top: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -524,6 +641,7 @@
         <a href="index.html" class="nav-link active">Downloads</a>
         <a href="privacy_policy.html" class="nav-link">Privacy Policy</a>
         <a href="terms.html" class="nav-link">Terms of Use</a>
+        <a href="https://github.com/manavakela1996/RESTdrop/" class="nav-link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
@@ -537,7 +655,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
         </svg>
-        <span>Version 0.1.0 (Windows 64-bit)</span>
+        <span>Version 0.1.1 (Windows 64-bit)</span>
       </div>
       <h1 class="hero-title">Embedded REST to Serial Port Bridge</h1>
       <p class="hero-subtitle">
@@ -550,7 +668,7 @@
         </span>
         <span class="hero-feat-item">
           <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" style="color: #10b981;"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-          Silent Install (<code>/s</code> Flag)
+          Silent Install (<code>/s</code>, <code>/S</code>, <code>/qn</code>, <code>/quiet</code>)
         </span>
         <span class="hero-feat-item">
           <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" style="color: #10b981;"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
@@ -585,7 +703,7 @@
           <ul class="card-meta-list">
             <li>
               <span class="meta-label">File Name</span>
-              <span class="meta-val">RESTdrop_0.1.0_x64-setup.exe</span>
+              <span class="meta-val">RESTdrop_0.1.1_x64-setup.exe</span>
             </li>
             <li>
               <span class="meta-label">File Size</span>
@@ -596,13 +714,13 @@
               <span class="meta-val">x86_64 (64-bit)</span>
             </li>
             <li>
-              <span class="meta-label">Silent Switch</span>
-              <span class="meta-val"><code>/s</code> or <code>/S</code></span>
+              <span class="meta-label">Silent Switches</span>
+              <span class="meta-val"><code>/s</code>, <code>/S</code>, <code>/qn</code>, <code>/quiet</code></span>
             </li>
           </ul>
         </div>
         <div>
-          <a href="setup/RESTdrop_0.1.0_x64-setup.exe" class="btn-download btn-primary" download>
+          <a href="setup/RESTdrop_0.1.1_x64-setup.exe" class="btn-download btn-primary" download>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -610,9 +728,9 @@
             </svg>
             Download Setup (.exe)
           </a>
-          <span class="cmd-label">Silent Command (Microsoft Store / CI):</span>
+          <span class="cmd-label">Silent Command (Supports /s, /S, /qn, /quiet):</span>
           <div class="cmd-box">
-            <span class="cmd-text">RESTdrop_0.1.0_x64-setup.exe /s</span>
+            <span class="cmd-text">RESTdrop_0.1.1_x64-setup.exe /s</span>
           </div>
         </div>
       </div>
@@ -639,7 +757,7 @@
           <ul class="card-meta-list">
             <li>
               <span class="meta-label">File Name</span>
-              <span class="meta-val">RESTdrop_0.1.0_x64_en-US.msi</span>
+              <span class="meta-val">RESTdrop_0.1.1_x64_en-US.msi</span>
             </li>
             <li>
               <span class="meta-label">File Size</span>
@@ -656,7 +774,7 @@
           </ul>
         </div>
         <div>
-          <a href="setup/RESTdrop_0.1.0_x64_en-US.msi" class="btn-download btn-secondary" download>
+          <a href="setup/RESTdrop_0.1.1_x64_en-US.msi" class="btn-download btn-secondary" download>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -666,12 +784,81 @@
           </a>
           <span class="cmd-label">Silent Command (Enterprise / Admin):</span>
           <div class="cmd-box">
-            <span class="cmd-text">msiexec /i RESTdrop_0.1.0_x64_en-US.msi /qn</span>
+            <span class="cmd-text">msiexec /i RESTdrop_0.1.1_x64_en-US.msi /qn</span>
           </div>
         </div>
       </div>
 
     </section>
+
+    <!-- Data Flow Architecture & Use Cases Showcase -->
+    <h2 class="section-title">Data Flow Architecture &amp; Use Cases</h2>
+    
+    <div class="diagram-card">
+      <h3 class="diagram-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-color);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Core Architecture: REST API to Serial Port Bridge
+      </h3>
+      <p class="diagram-desc">
+        Incoming HTTP / HTTPS REST requests from browsers, scripts, or mobile clients are parsed by RESTdrop's embedded Axum server, matched to configured routes and wildcard subpaths, serialized into structured JSON or raw byte buffers, and transmitted across your computer's Serial (COM / TTY) ports in real time.
+      </p>
+      <img src="pics/data_flow_overview.png" alt="RESTdrop Data Flow Architecture" class="diagram-img" loading="lazy">
+    </div>
+
+    <div class="diagram-card">
+      <h3 class="diagram-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" style="color: #10b981;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Use Case 1: Web Application to Hardware Control (MCU / IoT / Robotics)
+      </h3>
+      <p class="diagram-desc">
+        Directly connect modern browser Single-Page Apps (React, Vue, Angular) to microcontrollers (Arduino, ESP32, STM32) without WebSerial browser limitations or native USB drivers.
+      </p>
+      <img src="pics/usecase_web_mcu.png" alt="Web Application to Hardware Control" class="diagram-img" loading="lazy">
+    </div>
+
+    <div class="diagram-card">
+      <h3 class="diagram-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" style="color: #f59e0b;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Use Case 2: Automated Hardware-in-the-Loop (HIL) Testing &amp; CI/CD
+      </h3>
+      <p class="diagram-desc">
+        Trigger automated hardware test cycles, measure latency, reset Device Under Test (DUT) boards, and receive mock response verification from GitHub Actions, Jenkins, PyTest, or cURL.
+      </p>
+      <img src="pics/usecase_hil_testing.png" alt="Automated Hardware-in-the-Loop Testing" class="diagram-img" loading="lazy">
+    </div>
+
+    <div class="diagram-card">
+      <h3 class="diagram-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" style="color: #8b5cf6;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Use Case 3: Cloud Point-of-Sale (POS) &amp; Retail Peripherals
+      </h3>
+      <p class="diagram-desc">
+        Drive thermal ESC/POS receipt printers, 1D/2D barcode scanners, customer displays, and automatic cash drawers directly from web-based or tablet POS systems via local TLS-encrypted endpoints.
+      </p>
+      <img src="pics/usecase_pos_retail.png" alt="Cloud POS and Retail Peripherals" class="diagram-img" loading="lazy">
+    </div>
+
+    <div class="diagram-card">
+      <h3 class="diagram-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" style="color: #3b82f6;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Use Case 4: Industrial Automation, PLCs &amp; Test Benches
+      </h3>
+      <p class="diagram-desc">
+        Expose factory-floor RS-485 Modbus networks, programmable logic controllers (PLCs), digital multimeters, and environmental sensors as standard REST APIs for modern web SCADA dashboards.
+      </p>
+      <img src="pics/usecase_industrial.png" alt="Industrial Automation and PLCs" class="diagram-img" loading="lazy">
+    </div>
+
+    <div class="diagram-card">
+      <h3 class="diagram-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" style="color: #06b6d4;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Use Case 5: Zero-Code Standalone Desktop App (Drop-in <code>index.html</code>)
+      </h3>
+      <p class="diagram-desc">
+        Transform RESTdrop into a standalone branded desktop application without coding, compiling, or configuring SDKs. Simply copy any single-file HTML5/CSS/JavaScript page into <code>%APPDATA%\com.iembed8.restdrop\index.html</code>. RESTdrop automatically boots your HTML UI as a native application shell, communicating directly with local hardware serial ports via <code>fetch()</code> while keeping System Tray minimization active.
+      </p>
+      <img src="pics/usecase_custom_html.png" alt="Zero-Code Standalone Desktop App via Drop-in index.html" class="diagram-img" loading="lazy">
+    </div>
 
     <!-- Key Capabilities Section -->
     <h2 class="section-title">Core Features &amp; Architecture</h2>
@@ -686,7 +873,7 @@
         </div>
         <h3 class="feature-title">Multi-Port REST Server</h3>
         <p class="feature-desc">
-          Spin up concurrent HTTP and HTTPS listeners across distinct ports and paths with full route parameter and wildcard path remainder capture.
+          Spin up concurrent HTTP and HTTPS listeners across distinct ports and paths with full route parameter and wildcard path remainder capture, featuring native support for localhost over TLS.
         </p>
       </div>
 
@@ -715,6 +902,88 @@
         </p>
       </div>
     </section>
+
+    <!-- TLS / Root CA Setup Guide Section -->
+    <h2 class="section-title">Trusting Localhost over TLS (Root CA Setup)</h2>
+    <div class="diagram-card" style="margin-bottom: 40px;">
+      <h3 class="diagram-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" style="color: #10b981;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Enable Native HTTPS / TLS Trust for <code>localhost</code>
+      </h3>
+      <p class="diagram-desc">
+        To allow web browsers (Edge, Chrome) and CLI tools (<code>curl</code>) to communicate with <code>https://localhost:&lt;port&gt;</code> without security warning screens or mixed-content blocks, install RESTdrop's exported Root CA (<code>ca.crt</code>) into your Windows <strong>Trusted Root Certification Authorities</strong> store.
+      </p>
+
+      <!-- Infographic Diagram -->
+      <img src="pics/tls_root_ca_setup.png" alt="Trusting Localhost over TLS: Windows Root CA Setup" class="diagram-img" style="margin-bottom: 24px;" loading="lazy">
+
+      <!-- Step-by-Step Instructions -->
+      <div class="guide-steps">
+        <div class="guide-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Export the Root CA Certificate from RESTdrop</h4>
+            <p>
+              Open <strong>RESTdrop</strong>, click the <strong>Settings (⚙)</strong> button in the top right header, locate the <strong>TLS / HTTPS Root CA Certificate</strong> section, and click <strong>Export Root CA (.crt)</strong> to save <code>ca.crt</code> to your machine.
+            </p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Open Windows Certificate Manager</h4>
+            <p>
+              Press <kbd>Win</kbd> + <kbd>R</kbd> on your keyboard, type <code>certmgr.msc</code> into the Run box, and press <kbd>Enter</kbd> (or click <strong>OK</strong>).
+            </p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Locate the Trusted Root Certification Authorities Store</h4>
+            <p>
+              In the left navigation tree, expand <strong>Trusted Root Certification Authorities</strong>, then click on the <strong>Certificates</strong> folder.
+            </p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Launch the Certificate Import Wizard</h4>
+            <p>
+              Right-click on the <strong>Certificates</strong> folder &rarr; select <strong>All Tasks</strong> &rarr; click <strong>Import...</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h4>Select Your Exported Certificate</h4>
+            <p>
+              In the Wizard, click <strong>Next</strong>, click <strong>Browse...</strong>, navigate to and select your exported <code>ca.crt</code> file, and click <strong>Next</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <h4>Confirm Store &amp; Trust Installation</h4>
+            <p>
+              Confirm the store is set to <strong>Trusted Root Certification Authorities</strong> and click <strong>Finish</strong>. When Windows prompts with the security warning asking to confirm trusting this Root Authority, click <strong>Yes</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding: 14px 18px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; font-size: 13.5px; color: var(--text-primary);">
+        <strong style="color: #10b981;">&#10003; Verification:</strong> Once imported, restart your browser and navigate to <code>https://localhost:9443</code> (or your configured port). The address bar will display a valid green security padlock with zero certificate warning prompts.
+      </div>
+    </div>
 
     <!-- System Requirements Section -->
     <section class="req-card">
@@ -749,6 +1018,8 @@
       <a href="privacy_policy.html">Privacy Policy</a>
       <span>&bull;</span>
       <a href="terms.html">Terms of Use</a>
+      <span>&bull;</span>
+      <a href="https://github.com/manavakela1996/RESTdrop/" target="_blank" rel="noopener">GitHub</a>
     </div>
     <p>&copy; 2026 RESTdrop by Manav Akela / iEmbed8. All rights reserved.</p>
     <p style="margin-top: 6px; font-size: 13px;">
