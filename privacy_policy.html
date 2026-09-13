@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - RESTdrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    :root {
+      --bg-primary: #f8fafc;
+      --bg-surface: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --accent-color: #0284c7;
+      --accent-hover: #0369a1;
+      --accent-light: #e0f2fe;
+      --border-color: #e2e8f0;
+      --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --badge-bg: #f1f5f9;
+      --badge-text: #334155;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-primary: #0b0f19;
+        --bg-surface: #131b2e;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --accent-color: #38bdf8;
+        --accent-hover: #7dd3fc;
+        --accent-light: #082f49;
+        --border-color: #1e293b;
+        --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+        --badge-bg: #1e293b;
+        --badge-text: #cbd5e1;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header-bar {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .brand-logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      object-fit: contain;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .nav-link:hover {
+      color: var(--accent-color);
+    }
+
+    .nav-link.active {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .main-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 820px) {
+      .main-container {
+        grid-template-columns: 1fr;
+      }
+      .toc-sidebar {
+        display: none;
+      }
+    }
+
+    .toc-sidebar {
+      position: sticky;
+      top: 90px;
+      height: fit-content;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toc-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.15s;
+      display: block;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .toc-link:hover {
+      color: var(--accent-color);
+      background: var(--accent-light);
+    }
+
+    .content-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .doc-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    .doc-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-success {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .badge-success {
+        background: #064e3b;
+        color: #86efac;
+      }
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent-color);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0 32px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 36px 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-color);
+      scroll-margin-top: 100px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 24px 0 10px 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    ul, ol {
+      margin: 12px 0 20px 24px;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    code {
+      font-family: Consolas, Monaco, 'Courier New', Courier, monospace;
+      background: var(--badge-bg);
+      color: var(--accent-color);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13.5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    th {
+      background: var(--badge-bg);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      border-top: 1px solid var(--border-color);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 60px;
+      background: var(--bg-surface);
+    }
+
+    .footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header class="header-bar">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="RESTdrop Logo" class="brand-logo-img">
+        <span class="brand-name">RESTdrop</span>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Downloads</a>
+        <a href="privacy_policy.html" class="nav-link active">Privacy Policy</a>
+        <a href="terms.html" class="nav-link">Terms of Use</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <div class="main-container">
+
+    <!-- Table of Contents Sidebar -->
+    <aside class="toc-sidebar">
+      <div class="toc-title">Contents</div>
+      <ul class="toc-list">
+        <li><a href="#summary" class="toc-link">1. Summary & Core Promise</a></li>
+        <li><a href="#data-collection" class="toc-link">2. Data We Do Not Collect</a></li>
+        <li><a href="#local-data" class="toc-link">3. Local Data & Storage</a></li>
+        <li><a href="#permissions" class="toc-link">4. Hardware & Network Access</a></li>
+        <li><a href="#telemetry" class="toc-link">5. Telemetry & Analytics</a></li>
+        <li><a href="#security" class="toc-link">6. Security & Encryption</a></li>
+        <li><a href="#children" class="toc-link">7. Children's Privacy</a></li>
+        <li><a href="#changes" class="toc-link">8. Changes to this Policy</a></li>
+        <li><a href="#contact" class="toc-link">9. Contact & Inquiries</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-card">
+      <div class="doc-header">
+        <h1 class="doc-title">Privacy Policy</h1>
+        <div class="doc-meta">
+          <span><strong>Application:</strong> RESTdrop</span>
+          <span>&bull;</span>
+          <span><strong>App ID:</strong> <code>com.iembed8.restdrop</code></span>
+          <span>&bull;</span>
+          <span><strong>Last Updated:</strong> September 13, 2026</span>
+          <span class="badge badge-success">Zero Cloud Telemetry</span>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p><strong>Privacy Commitment:</strong> RESTdrop operates entirely on your local device. We do not collect, harvest, monitor, sell, or transmit any personal information, browsing data, hardware telemetry, or API payloads to any external servers.</p>
+      </div>
+
+      <section id="summary">
+        <h2>1. Summary & Core Promise</h2>
+        <p>This Privacy Statement explains how <strong>RESTdrop</strong> ("we", "us", "our", or "the Application"), developed by Manav Akela / iEmbed8, handles information when you install and run the desktop application on Microsoft Windows or other supported operating systems.</p>
+        <p>RESTdrop is a local developer tool designed to bridge HTTP / HTTPS REST API calls directly to hardware Serial (COM / TTY) ports. All networking, routing, data formatting, and logging are executed 100% locally on your machine.</p>
+      </section>
+
+      <section id="data-collection">
+        <h2>2. Information We Do Not Collect</h2>
+        <p>Unlike web services or cloud-connected apps, RESTdrop does not maintain accounts or cloud backends. Specifically:</p>
+        <ul>
+          <li><strong>No Personal Identifiable Information (PII):</strong> We do not collect names, email addresses, phone numbers, IP addresses, physical locations, or device identifiers.</li>
+          <li><strong>No Payload Inspection:</strong> We do not inspect, upload, or transmit any HTTP/HTTPS request bodies, path parameters, query variables, or serial stream data sent through your configured instances.</li>
+          <li><strong>No Account Credentials:</strong> RESTdrop requires no user login, credentials, or third-party authentication.</li>
+          <li><strong>No Cookies or Tracking:</strong> No tracking cookies, web beacons, advertising SDKs, or third-party fingerprinting scripts are bundled or loaded.</li>
+        </ul>
+      </section>
+
+      <section id="local-data">
+        <h2>3. Local Data & Storage</h2>
+        <p>Any data processed by RESTdrop remains strictly on your local machine within the standard application data directory. Here is what is stored locally:</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Local Path / Storage</th>
+              <th>Purpose & Retention</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Configuration</strong></td>
+              <td><code>%APPDATA%\com.iembed8.restdrop\restdrop_config.json</code></td>
+              <td>Stores your custom port numbers, endpoints, baud rates, and serial formatting settings. Retained until you delete or uninstall the app.</td>
+            </tr>
+            <tr>
+              <td><strong>Traffic Logs</strong></td>
+              <td>Volatile Memory (RAM)</td>
+              <td>Real-time request logs shown in the Traffic Monitor tab are held strictly in memory and cleared upon application restart or manual clear.</td>
+            </tr>
+            <tr>
+              <td><strong>UI Settings</strong></td>
+              <td>Browser <code>localStorage</code></td>
+              <td>Stores local UI preferences (Dark/Light theme, accent color, panel toggles).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>You may inspect, backup, or delete any of these files at any time via the <strong>Settings</strong> modal or by deleting the directory directly in Windows File Explorer.</p>
+      </section>
+
+      <section id="permissions">
+        <h2>4. Hardware & Network Access Permissions</h2>
+        <p>To perform its core functions as an embedded REST-to-Serial bridge, RESTdrop requests and utilizes the following local system capabilities:</p>
+        <ul>
+          <li><strong>Local Network Binding:</strong> Binds to local loopback addresses (such as <code>127.0.0.1</code>, <code>localhost</code>, or <code>0.0.0.0</code>) on user-selected ports (e.g., <code>3000</code>) to receive your API test requests. The application does not initiate outbound Internet connections.</li>
+          <li><strong>Serial (COM) Port Access:</strong> Connects to physical or virtual serial devices (e.g., <code>COM1</code>, <code>COM3</code>, <code>/dev/ttyUSB0</code>) attached to your machine to transmit and receive test data.</li>
+          <li><strong>Local File System:</strong> Reads and writes local configuration files within your user profile directory.</li>
+          <li><strong>Windows Startup (Run Registry):</strong> If enabled, registers an autostart entry in <code>HKCU\Software\Microsoft\Windows\CurrentVersion\Run</code> so the background service can run minimized to your taskbar on system logon.</li>
+        </ul>
+      </section>
+
+      <section id="telemetry">
+        <h2>5. Telemetry & Third-Party Services</h2>
+        <p>RESTdrop contains <strong>no telemetry code</strong>, crash reporting analytics (e.g., Sentry, Google Analytics), or marketing trackers. When you run RESTdrop, zero network packets are sent to the developer or any third party.</p>
+        <p>If you download RESTdrop from the Microsoft Store, Microsoft may collect standard download, update, and basic crash telemetry as governed by the <a href="https://www.microsoft.com/en-us/privacy/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>. We do not have access to individual user identities from Microsoft Store metrics.</p>
+      </section>
+
+      <section id="security">
+        <h2>6. Security & Encryption</h2>
+        <p>We prioritize security for developer and embedded workflows:</p>
+        <ul>
+          <li><strong>Zero Data Transmission:</strong> All data, payload contents, and configuration files remain strictly on your local machine and are never transmitted over the Internet.</li>
+          <li><strong>No Internet Exposure Required:</strong> RESTdrop is configured by default to bind to loopback (<code>localhost</code>), preventing unauthorized network inbound access.</li>
+          <li><strong>Sandboxed Webview:</strong> The user interface runs within a sandboxed Webview environment with strictly declared IPC capabilities.</li>
+        </ul>
+      </section>
+
+      <section id="children">
+        <h2>7. Children's Privacy</h2>
+        <p>RESTdrop is a technical development and engineering tool intended for software engineers, hobbyists, and test technicians. Because we do not collect any personal information whatsoever, we do not knowingly solicit or collect data from children under the age of 13 (or under 16 in applicable jurisdictions).</p>
+      </section>
+
+      <section id="changes">
+        <h2>8. Changes to This Privacy Statement</h2>
+        <p>We may occasionally update this Privacy Policy to reflect application improvements, new features, or statutory requirements. Any updates will be published with a revised "Last Updated" date at the top of this document. Continued use of RESTdrop following such changes constitutes your acceptance of the revised terms.</p>
+      </section>
+
+      <section id="contact">
+        <h2>9. Contact Information</h2>
+        <p>If you have any questions, concerns, or inquiries regarding this Privacy Statement or the data practices of RESTdrop, please contact us:</p>
+        <ul>
+          <li><strong>Developer:</strong> Manav Akela</li>
+          <li><strong>Publisher:</strong> iEmbed8</li>
+          <li><strong>Project Repository & Issue Tracker:</strong> <a href="https://github.com" target="_blank" rel="noopener">GitHub Project Page</a></li>
+          <li><strong>Email Support:</strong> <a href="mailto:mail@iembed8.com">mail@iembed8.com</a></li>
+        </ul>
+      </section>
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 RESTdrop by Manav Akela / iEmbed8. All rights reserved.</p>
+    <p style="margin-top: 8px;">
+      <a href="index.html">Downloads</a> &bull; 
+      <a href="privacy_policy.html">Privacy Policy</a> &bull; 
+      <a href="terms.html">Terms of Use</a>
+    </p>
+  </footer>
+
+</body>
+</html>
