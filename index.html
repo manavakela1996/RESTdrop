@@ -655,7 +655,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
         </svg>
-        <span>Version 0.1.1 (Windows 64-bit)</span>
+        <span>Version 0.1.2 (Windows 64-bit)</span>
       </div>
       <h1 class="hero-title">Embedded REST to Serial Port Bridge</h1>
       <p class="hero-subtitle">
@@ -703,7 +703,7 @@
           <ul class="card-meta-list">
             <li>
               <span class="meta-label">File Name</span>
-              <span class="meta-val">RESTdrop_0.1.1_x64-setup.exe</span>
+              <span class="meta-val">RESTdrop_0.1.2_x64-setup.exe</span>
             </li>
             <li>
               <span class="meta-label">File Size</span>
@@ -720,7 +720,7 @@
           </ul>
         </div>
         <div>
-          <a href="setup/RESTdrop_0.1.1_x64-setup.exe" class="btn-download btn-primary" download>
+          <a href="setup/RESTdrop_0.1.2_x64-setup.exe" class="btn-download btn-primary" download>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -730,7 +730,7 @@
           </a>
           <span class="cmd-label">Silent Command (Supports /s, /S, /qn, /quiet):</span>
           <div class="cmd-box">
-            <span class="cmd-text">RESTdrop_0.1.1_x64-setup.exe /s</span>
+            <span class="cmd-text">RESTdrop_0.1.2_x64-setup.exe /s</span>
           </div>
         </div>
       </div>
@@ -757,7 +757,7 @@
           <ul class="card-meta-list">
             <li>
               <span class="meta-label">File Name</span>
-              <span class="meta-val">RESTdrop_0.1.1_x64_en-US.msi</span>
+              <span class="meta-val">RESTdrop_0.1.2_x64_en-US.msi</span>
             </li>
             <li>
               <span class="meta-label">File Size</span>
@@ -774,7 +774,7 @@
           </ul>
         </div>
         <div>
-          <a href="setup/RESTdrop_0.1.1_x64_en-US.msi" class="btn-download btn-secondary" download>
+          <a href="setup/RESTdrop_0.1.2_x64_en-US.msi" class="btn-download btn-secondary" download>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -784,7 +784,7 @@
           </a>
           <span class="cmd-label">Silent Command (Enterprise / Admin):</span>
           <div class="cmd-box">
-            <span class="cmd-text">msiexec /i RESTdrop_0.1.1_x64_en-US.msi /qn</span>
+            <span class="cmd-text">msiexec /i RESTdrop_0.1.2_x64_en-US.msi /qn</span>
           </div>
         </div>
       </div>
@@ -811,7 +811,7 @@
         Use Case 1: Web Application to Hardware Control (MCU / IoT / Robotics)
       </h3>
       <p class="diagram-desc">
-        Directly connect modern browser Single-Page Apps (React, Vue, Angular) to microcontrollers (Arduino, ESP32, STM32) without WebSerial browser limitations or native USB drivers.
+        Directly connect modern browser Single-Page Apps (React, Vue, Angular) to microcontrollers (Arduino, ESP32, STM32) without WebSerial browser limitations via pure user-mode serial communication.
       </p>
       <img src="pics/usecase_web_mcu.png" alt="Web Application to Hardware Control" class="diagram-img" loading="lazy">
     </div>
@@ -999,7 +999,11 @@
         </li>
         <li class="req-item">
           <span class="req-check">&check;</span>
-          <span><strong>Hardware:</strong> Physical COM port, USB-to-UART adapter, or virtual COM driver</span>
+          <span><strong>Hardware:</strong> Physical COM port, USB-to-UART adapter, or virtual COM interface (standard Windows serial COM ports)</span>
+        </li>
+        <li class="req-item">
+          <span class="req-check">&check;</span>
+          <span><strong>Drivers &amp; Dependencies:</strong> Pure user-mode Win32 application. RESTdrop bundles and installs zero drivers or NT background services. Hardware drivers (such as FTDI, CP210x, CH340) are standard device drivers obtained by the user directly from device manufacturers or via Windows Update.</span>
         </li>
         <li class="req-item">
           <span class="req-check">&check;</span>

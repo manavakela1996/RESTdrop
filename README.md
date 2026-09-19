@@ -96,18 +96,18 @@ Download the latest version directly from the [Official Setup & Downloads Portal
 
 | Package | Format | Architecture | Download Link |
 | :--- | :--- | :--- | :--- |
-| **Standard Installer (Recommended)** | `.exe` | Windows 64-bit | [RESTdrop_0.1.1_x64-setup.exe](setup/setup/RESTdrop_0.1.1_x64-setup.exe) |
-| **Windows Package** | `.msi` | Windows 64-bit | [RESTdrop_0.1.1_x64_en-US.msi](setup/setup/RESTdrop_0.1.1_x64_en-US.msi) |
+| **Standard Installer (Recommended)** | `.exe` | Windows 64-bit | [RESTdrop_0.1.2_x64-setup.exe](setup/setup/RESTdrop_0.1.2_x64-setup.exe) |
+| **Windows Package** | `.msi` | Windows 64-bit | [RESTdrop_0.1.2_x64_en-US.msi](setup/setup/RESTdrop_0.1.2_x64_en-US.msi) |
 
 ### Silent Installation Commands
 
 #### Standard Installer (`.exe`):
 Ideal for Microsoft Store packaging, WinGet, and automated terminal installation.
 The `.exe` installer supports all of the following silent switches interchangeably:
-- `RESTdrop_0.1.1_x64-setup.exe /s` (Standard / Recommended)
-- `RESTdrop_0.1.1_x64-setup.exe /S`
-- `RESTdrop_0.1.1_x64-setup.exe /qn`
-- `RESTdrop_0.1.1_x64-setup.exe /quiet`
+- `RESTdrop_0.1.2_x64-setup.exe /s` (Standard / Recommended)
+- `RESTdrop_0.1.2_x64-setup.exe /S`
+- `RESTdrop_0.1.2_x64-setup.exe /qn`
+- `RESTdrop_0.1.2_x64-setup.exe /quiet`
 
 *(All return exit code `0` on successful installation).*
 
@@ -120,7 +120,7 @@ Uninstall.exe /s
 #### Windows Package (`.msi`):
 Ideal for Active Directory Group Policy (GPO), Microsoft Intune, and enterprise administration:
 ```cmd
-msiexec /i RESTdrop_0.1.1_x64_en-US.msi /qn
+msiexec /i RESTdrop_0.1.2_x64_en-US.msi /qn
 ```
 
 ---
@@ -227,11 +227,12 @@ Once imported, calls to `https://localhost:<port>` are recognized and trusted na
 
 ---
 
-## 📋 System Requirements
+## 📋 System Requirements & Software Dependencies
 
 - **Operating System:** Windows 10 (Build 19041+) or Windows 11 (64-bit)
 - **Architecture:** x86_64 (AMD64 / Intel 64)
 - **Hardware Interface:** Physical COM port, USB-to-UART bridge (FTDI, CP2102, CH340), or virtual COM pair (com0com, VSPE)
+- **Drivers & Dependencies (Microsoft Store Policy 10.2.4.2 Compliance):** Pure user-mode Win32 application. RESTdrop **bundles zero third-party drivers or NT background services**. The application communicates with hardware via standard Windows Win32 Serial APIs. Any external hardware drivers (e.g. for USB-to-UART bridge chips such as FTDI, Silicon Labs CP210x, or WCH CH340) are standard device drivers obtained by the user directly from their device manufacturer or via Windows Update.
 - **Web Runtime:** Microsoft Edge WebView2 (pre-installed on Windows 10/11)
 
 ---
