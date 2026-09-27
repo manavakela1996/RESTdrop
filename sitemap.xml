@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        
+    <!-- Homepage with attached images -->
+    <url>
+        <loc>https://manavakela1996.github.io/RESTdrop/</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <!-- Logo -->
+        <image:image>
+            <image:loc>https://manavakela1996.github.io/RESTdrop/logo.png</image:loc>
+            <image:title>RESTdrop Logo</image:title>
+        </image:image>
+
+        <!-- Architecture & Flow Diagrams (.png) -->
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/data_flow_overview.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/tls_root_ca_setup.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_custom_html.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_hil_testing.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_industrial.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_pos_retail.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_web_mcu.png</image:loc></image:image>
+
+        <!-- Architecture & Flow Diagrams (.jpg fallbacks) -->
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/data_flow_overview.jpg</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/tls_root_ca_setup.jpg</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_custom_html.jpg</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_hil_testing.jpg</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_industrial.jpg</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_pos_retail.jpg</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/usecase_web_mcu.jpg</image:loc></image:image>
+
+        <!-- Screenshots -->
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/1.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/2.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/3.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/4.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/5.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/6.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/7.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/8.png</image:loc></image:image>
+        <image:image><image:loc>https://manavakela1996.github.io/RESTdrop/pics/Screenshots/9.png</image:loc></image:image>
+    </url>
+
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://manavakela1996.github.io/RESTdrop/privacy_policy.html</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://manavakela1996.github.io/RESTdrop/terms.html</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Downloads -->
+    <url>
+        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.2_x64-setup.exe</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.2_x64_en-US.msi</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
