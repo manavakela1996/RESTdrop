@@ -11,7 +11,8 @@
 
 ## 🌐 Official Web Pages & Links
 
-- 🚀 **Official Downloads Portal:** [https://manavakela1996.github.io/RESTdrop](https://manavakela1996.github.io/RESTdrop)
+-  **📥 MICROSOFT STORE:** [https://apps.microsoft.com/detail/xpfnwjqf3tv5s0](https://apps.microsoft.com/detail/xpfnwjqf3tv5s0)
+-  **📥 Official Downloads Portal:** [https://manavakela1996.github.io/RESTdrop](https://manavakela1996.github.io/RESTdrop)
 - 🔒 **Privacy Policy:** [https://manavakela1996.github.io/RESTdrop/privacy_policy.html](https://manavakela1996.github.io/RESTdrop/privacy_policy.html)
 - 📜 **Terms of Use:** [https://manavakela1996.github.io/RESTdrop/terms.html](https://manavakela1996.github.io/RESTdrop/terms.html)
 - 💻 **GitHub Repository:** [https://github.com/manavakela1996/RESTdrop/](https://github.com/manavakela1996/RESTdrop/)
