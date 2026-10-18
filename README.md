@@ -76,6 +76,8 @@ Build and distribute branded desktop apps with **zero coding or compilation**. S
   - **Custom Template:** Define custom protocols using variables such as `{{method}}`, `{{path}}`, `{{body}}`, `{{sessionId}}`, and `{{timestamp}}`.
 - **Hardware Serial Configuration:**
   Auto-detects computer COM ports with baud rates from `9,600` to `921,600`, customizable data bits, parity, stop bits, and line delimiters (`\r\n` CRLF, `\n` LF, or None).
+- **Configurable Serial Device Name Source:**
+  Choose how serial port descriptions are sourced in Settings: Bus reported device description (native USB firmware descriptor), Windows driver description, friendly name, manufacturer/product, or hardware ID to easily identify and distinguish devices in multi-port environments.
 - **Auto-Disable Protection:**
   Gracefully pauses listeners if an assigned serial port is detached or busy, preventing application crashes.
 - **Live Traffic Monitor & Simulator:**
@@ -97,18 +99,18 @@ Download the latest version directly from the [Official Setup & Downloads Portal
 
 | Package | Format | Architecture | Download Link |
 | :--- | :--- | :--- | :--- |
-| **Standard Installer (Recommended)** | `.exe` | Windows 64-bit | [RESTdrop_0.1.2_x64-setup.exe](setup/setup/RESTdrop_0.1.2_x64-setup.exe) |
-| **Windows Package** | `.msi` | Windows 64-bit | [RESTdrop_0.1.2_x64_en-US.msi](setup/setup/RESTdrop_0.1.2_x64_en-US.msi) |
+| **Standard Installer (Recommended)** | `.exe` | Windows 64-bit | [RESTdrop_0.1.3_x64-setup.exe](setup/RESTdrop_0.1.3_x64-setup.exe) |
+| **Windows Package** | `.msi` | Windows 64-bit | [RESTdrop_0.1.3_x64_en-US.msi](setup/RESTdrop_0.1.3_x64_en-US.msi) |
 
 ### Silent Installation Commands
 
 #### Standard Installer (`.exe`):
 Ideal for Microsoft Store packaging, WinGet, and automated terminal installation.
 The `.exe` installer supports all of the following silent switches interchangeably:
-- `RESTdrop_0.1.2_x64-setup.exe /s` (Standard / Recommended)
-- `RESTdrop_0.1.2_x64-setup.exe /S`
-- `RESTdrop_0.1.2_x64-setup.exe /qn`
-- `RESTdrop_0.1.2_x64-setup.exe /quiet`
+- `RESTdrop_0.1.3_x64-setup.exe /s` (Standard / Recommended)
+- `RESTdrop_0.1.3_x64-setup.exe /S`
+- `RESTdrop_0.1.3_x64-setup.exe /qn`
+- `RESTdrop_0.1.3_x64-setup.exe /quiet`
 
 *(All return exit code `0` on successful installation).*
 
@@ -121,7 +123,7 @@ Uninstall.exe /s
 #### Windows Package (`.msi`):
 Ideal for Active Directory Group Policy (GPO), Microsoft Intune, and enterprise administration:
 ```cmd
-msiexec /i RESTdrop_0.1.2_x64_en-US.msi /qn
+msiexec /i RESTdrop_0.1.3_x64_en-US.msi /qn
 ```
 
 ---

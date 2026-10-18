@@ -5,7 +5,7 @@
     <!-- Homepage with attached images -->
     <url>
         <loc>https://manavakela1996.github.io/RESTdrop/</loc>
-        <lastmod>2026-03-27</lastmod>
+        <lastmod>2026-10-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         
@@ -48,27 +48,27 @@
     <!-- Legal Pages -->
     <url>
         <loc>https://manavakela1996.github.io/RESTdrop/privacy_policy.html</loc>
-        <lastmod>2026-03-27</lastmod>
+        <lastmod>2026-10-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://manavakela1996.github.io/RESTdrop/terms.html</loc>
-        <lastmod>2026-03-27</lastmod>
+        <lastmod>2026-10-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
 
     <!-- Downloads -->
     <url>
-        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.2_x64-setup.exe</loc>
-        <lastmod>2026-03-27</lastmod>
+        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.3_x64-setup.exe</loc>
+        <lastmod>2026-10-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.2_x64_en-US.msi</loc>
-        <lastmod>2026-03-27</lastmod>
+        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.3_x64_en-US.msi</loc>
+        <lastmod>2026-10-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

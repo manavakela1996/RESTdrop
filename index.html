@@ -508,17 +508,32 @@
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       margin-bottom: 60px;
+    }
+
+    @media (max-width: 680px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .feature-item {
       background: var(--bg-surface);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 24px;
+      border-radius: 14px;
+      padding: 26px;
       box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .feature-item:hover {
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
     }
 
     .feature-icon-wrap {
@@ -763,7 +778,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
         </svg>
-        <span>Version 0.1.2 (Windows 64-bit)</span>
+        <span>Version 0.1.3 (Windows 64-bit)</span>
       </div>
       <h1 class="hero-title">Embedded REST to Serial Port Bridge</h1>
       <p class="hero-subtitle">
@@ -827,7 +842,7 @@
           <ul class="card-meta-list">
             <li>
               <span class="meta-label">File Name</span>
-              <span class="meta-val">RESTdrop_0.1.2_x64-setup.exe</span>
+              <span class="meta-val">RESTdrop_0.1.3_x64-setup.exe</span>
             </li>
             <li>
               <span class="meta-label">File Size</span>
@@ -844,7 +859,7 @@
           </ul>
         </div>
         <div>
-          <a href="setup/RESTdrop_0.1.2_x64-setup.exe" class="btn-download btn-primary" download>
+          <a href="setup/RESTdrop_0.1.3_x64-setup.exe" class="btn-download btn-primary" download>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -854,7 +869,7 @@
           </a>
           <span class="cmd-label">Silent Command (Supports /s, /S, /qn, /quiet):</span>
           <div class="cmd-box">
-            <span class="cmd-text">RESTdrop_0.1.2_x64-setup.exe /s</span>
+            <span class="cmd-text">RESTdrop_0.1.3_x64-setup.exe /s</span>
           </div>
         </div>
       </div>
@@ -881,7 +896,7 @@
           <ul class="card-meta-list">
             <li>
               <span class="meta-label">File Name</span>
-              <span class="meta-val">RESTdrop_0.1.2_x64_en-US.msi</span>
+              <span class="meta-val">RESTdrop_0.1.3_x64_en-US.msi</span>
             </li>
             <li>
               <span class="meta-label">File Size</span>
@@ -898,7 +913,7 @@
           </ul>
         </div>
         <div>
-          <a href="setup/RESTdrop_0.1.2_x64_en-US.msi" class="btn-download btn-secondary" download>
+          <a href="setup/RESTdrop_0.1.3_x64_en-US.msi" class="btn-download btn-secondary" download>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -908,7 +923,7 @@
           </a>
           <span class="cmd-label">Silent Command (Enterprise / Admin):</span>
           <div class="cmd-box">
-            <span class="cmd-text">msiexec /i RESTdrop_0.1.2_x64_en-US.msi /qn</span>
+            <span class="cmd-text">msiexec /i RESTdrop_0.1.3_x64_en-US.msi /qn</span>
           </div>
         </div>
       </div>
@@ -1023,6 +1038,27 @@
         <h3 class="feature-title">System Tray &amp; Background Mode</h3>
         <p class="feature-desc">
           Minimizes smoothly to the Windows System Tray on close when configured, keeping all active listeners and hardware bridges serving traffic uninterrupted.
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+            <rect x="9" y="9" width="6" height="6"/>
+            <line x1="9" y1="1" x2="9" y2="4"/>
+            <line x1="15" y1="1" x2="15" y2="4"/>
+            <line x1="9" y1="20" x2="9" y2="23"/>
+            <line x1="15" y1="20" x2="15" y2="23"/>
+            <line x1="20" y1="9" x2="23" y2="9"/>
+            <line x1="20" y1="14" x2="23" y2="14"/>
+            <line x1="1" y1="9" x2="4" y2="9"/>
+            <line x1="1" y1="14" x2="4" y2="14"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Smart Serial Naming</h3>
+        <p class="feature-desc">
+          Toggle between Bus-reported firmware descriptions and Windows Driver device descriptions in Settings to reliably identify custom USB microcontrollers, virtual COM ports, and industrial RS-232/485 converters.
         </p>
       </div>
     </section>

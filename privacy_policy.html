@@ -395,7 +395,7 @@
           <span>&bull;</span>
           <span><strong>App ID:</strong> <code>com.iembed8.restdrop</code></span>
           <span>&bull;</span>
-          <span><strong>Last Updated:</strong> September 13, 2026</span>
+          <span><strong>Last Updated:</strong> October 18, 2026</span>
           <span class="badge badge-success">Zero Cloud Telemetry</span>
         </div>
       </div>
@@ -447,7 +447,7 @@
             <tr>
               <td><strong>UI Settings</strong></td>
               <td>Browser <code>localStorage</code></td>
-              <td>Stores local UI preferences (Dark/Light theme, accent color, panel toggles).</td>
+              <td>Stores local UI preferences (Dark/Light theme, accent color, panel toggles, serial device name source selection).</td>
             </tr>
           </tbody>
         </table>
@@ -460,7 +460,7 @@
         <p>To perform its core functions as an embedded REST-to-Serial bridge, RESTdrop requests and utilizes the following local system capabilities:</p>
         <ul>
           <li><strong>Local Network Binding:</strong> Binds to local loopback addresses (such as <code>127.0.0.1</code>, <code>localhost</code>, or <code>0.0.0.0</code>) on user-selected ports (e.g., <code>3000</code>) to receive your API test requests. The application does not initiate outbound Internet connections.</li>
-          <li><strong>Serial (COM) Port Access:</strong> Connects to physical or virtual serial devices (e.g., <code>COM1</code>, <code>COM3</code>, <code>/dev/ttyUSB0</code>) attached to your machine to transmit and receive test data.</li>
+          <li><strong>Serial (COM) Port &amp; Descriptor Access:</strong> Connects to physical or virtual serial devices (e.g., <code>COM1</code>, <code>COM3</code>, <code>/dev/ttyUSB0</code>) attached to your machine to transmit and receive test data. Queries local Windows SetupAPI device descriptors (either bus-reported firmware strings or driver device descriptions based on your settings preference) to display human-readable hardware descriptions without sending any identifier off-machine.</li>
           <li><strong>Local File System:</strong> Reads and writes local configuration files within your user profile directory.</li>
           <li><strong>Windows Startup (Run Registry):</strong> If enabled, registers an autostart entry in <code>HKCU\Software\Microsoft\Windows\CurrentVersion\Run</code> so the background service can run minimized to your taskbar on system logon.</li>
         </ul>
