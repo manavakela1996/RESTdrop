@@ -99,8 +99,8 @@ Download the latest version directly from the [Official Setup & Downloads Portal
 
 | Package | Format | Architecture | Download Link |
 | :--- | :--- | :--- | :--- |
-| **Standard Installer (Recommended)** | `.exe` | Windows 64-bit | [RESTdrop_0.1.3_x64-setup.exe](setup/RESTdrop_0.1.3_x64-setup.exe) |
-| **Windows Package** | `.msi` | Windows 64-bit | [RESTdrop_0.1.3_x64_en-US.msi](setup/RESTdrop_0.1.3_x64_en-US.msi) |
+| **Standard Installer (Recommended)** | `.exe` | Windows 64-bit | [RESTdrop_0.1.3_x64-setup.exe](https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.3_x64-setup.exe) |
+| **Windows Package** | `.msi` | Windows 64-bit | [RESTdrop_0.1.3_x64_en-US.msi](https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.3_x64_en-US.msi) |
 
 ### Silent Installation Commands
 
