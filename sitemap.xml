@@ -61,14 +61,14 @@
 
     <!-- Downloads -->
     <url>
-        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.3_x64-setup.exe</loc>
-        <lastmod>2026-10-18</lastmod>
+        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.4_x64-setup.exe</loc>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.3_x64_en-US.msi</loc>
-        <lastmod>2026-10-18</lastmod>
+        <loc>https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.4_x64_en-US.msi</loc>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

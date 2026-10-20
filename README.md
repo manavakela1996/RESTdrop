@@ -11,7 +11,7 @@
 
 ## 🌐 Official Web Pages & Links
 
--  **📥 MICROSOFT STORE:** [https://apps.microsoft.com/detail/xpfnwjqf3tv5s0](https://apps.microsoft.com/detail/xpfnwjqf3tv5s0)
+-  **📥 MICROSOFT STORE:** [https://apps.microsoft.com/detail/9N482D5KNWF0](https://apps.microsoft.com/detail/9N482D5KNWF0)
 -  **📥 Official Downloads Portal:** [https://manavakela1996.github.io/RESTdrop](https://manavakela1996.github.io/RESTdrop)
 - 🔒 **Privacy Policy:** [https://manavakela1996.github.io/RESTdrop/privacy_policy.html](https://manavakela1996.github.io/RESTdrop/privacy_policy.html)
 - 📜 **Terms of Use:** [https://manavakela1996.github.io/RESTdrop/terms.html](https://manavakela1996.github.io/RESTdrop/terms.html)
@@ -99,18 +99,18 @@ Download the latest version directly from the [Official Setup & Downloads Portal
 
 | Package | Format | Architecture | Download Link |
 | :--- | :--- | :--- | :--- |
-| **Standard Installer (Recommended)** | `.exe` | Windows 64-bit | [RESTdrop_0.1.3_x64-setup.exe](https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.3_x64-setup.exe) |
-| **Windows Package** | `.msi` | Windows 64-bit | [RESTdrop_0.1.3_x64_en-US.msi](https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.3_x64_en-US.msi) |
+| **Standard Installer (Recommended)** | `.exe` | Windows 64-bit | [RESTdrop_0.1.4_x64-setup.exe](https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.4_x64-setup.exe) |
+| **Windows Package** | `.msi` | Windows 64-bit | [RESTdrop_0.1.4_x64_en-US.msi](https://manavakela1996.github.io/RESTdrop/setup/RESTdrop_0.1.4_x64_en-US.msi) |
 
 ### Silent Installation Commands
 
 #### Standard Installer (`.exe`):
 Ideal for Microsoft Store packaging, WinGet, and automated terminal installation.
 The `.exe` installer supports all of the following silent switches interchangeably:
-- `RESTdrop_0.1.3_x64-setup.exe /s` (Standard / Recommended)
-- `RESTdrop_0.1.3_x64-setup.exe /S`
-- `RESTdrop_0.1.3_x64-setup.exe /qn`
-- `RESTdrop_0.1.3_x64-setup.exe /quiet`
+- `RESTdrop_0.1.4_x64-setup.exe /s` (Standard / Recommended)
+- `RESTdrop_0.1.4_x64-setup.exe /S`
+- `RESTdrop_0.1.4_x64-setup.exe /qn`
+- `RESTdrop_0.1.4_x64-setup.exe /quiet`
 
 *(All return exit code `0` on successful installation).*
 
@@ -123,7 +123,7 @@ Uninstall.exe /s
 #### Windows Package (`.msi`):
 Ideal for Active Directory Group Policy (GPO), Microsoft Intune, and enterprise administration:
 ```cmd
-msiexec /i RESTdrop_0.1.3_x64_en-US.msi /qn
+msiexec /i RESTdrop_0.1.4_x64_en-US.msi /qn
 ```
 
 ---
